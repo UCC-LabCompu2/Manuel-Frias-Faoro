@@ -5,7 +5,7 @@
  * 
  */
 function conversor(id, valor) {
-    if(valor.includes (",")){
+    if (valor.includes(",")) {
         valor = valor.replace(",", ".");
     }
     if (isNaN(valor)) {
@@ -86,4 +86,22 @@ function div() {
     n1 = Number(document.getElementsByName("div_num1")[0].value);
     n2 = Number(document.getElementsByName("div_num2")[0].value);
     document.getElementsByName("div_total")[0].innerHTML = n1 / n2;
+}
+
+function cargar_web() {
+    var can, uni, urlcomp;
+    can = document.getElementById("distancia").value;
+    uni = document.getElementsByName("unidades")[0].value;
+    urlcomp = "segundaWeb.html#" + can + "#" + uni;
+    window.open(urlcomp);
+}
+
+function cargar_res() {
+    var cant, unid, urlcompl;
+    urlcompl = window.location.href.split("/")[5];
+    cant = urlcompl.split("#")[1];
+    unid = urlcompl.split("#")[2];
+
+    document.getElementById("dist").value = cant + " " + unid;
+
 }

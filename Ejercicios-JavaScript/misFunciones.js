@@ -1,3 +1,9 @@
+/**
+ * Conversor de unidades: "metros, pulgadas, yardas y pies"
+ * @param{string} id - El id de los inputs
+ * @param{number} valor - El valor de los inputs
+ * 
+ */
 function conversor(id, valor){
     if(isNaN(valor)){
         alert("se ingreso un valor invalido");

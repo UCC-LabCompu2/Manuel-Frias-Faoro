@@ -105,3 +105,21 @@ function cargar_res() {
     document.getElementById("dist").value = cant + " " + unid;
 
 }
+
+function guardarLS(){
+    let distancia, unidad;
+    distancia = document.getElementById("distancia").value;
+    unidad = document.getElementsByName("unidades")[0].value;
+    localStorage.setItem("distancials", distancia);
+    localStorage.setItem("unidadls", unidad);
+    window.open('2_web.html');
+}
+
+function cargarLS(){
+     let can, uni;
+     can = localStorage.getItem("distancials");
+     uni = localStorage.getItem("unidadesls");
+
+     document.getElementById("dist").value = can + " " + uni;
+}
+ 
